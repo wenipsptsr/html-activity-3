@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 300px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Tambah Barang</h1>
+   <form action="/submit" method="post">
+    <div class="form-group">
+    <label for="name">Nama Barang:</label>
+    <input type="text" id="name" name="name" required>
+    </div>
+
+   <div class="form-group">
+    <label for="item-code">Kode Barang:</label>
+    <input type="text" id="item-code" name="item-code" required>
+   </div>
+
+   <div class="form-group">
+    <label for="entry-date">Tanggal Masuk:</label>
+    <input type="date" id="entry-date" name="entry-date" required>
+   </div>
+
+  <div class="form-group">
+    <label for="expiry-date">Tanggal Expired:</label>
+    <input type="date" id="expiry-date" name="expiry-date" required>
+   </div>
+
+   <div class="form-group">
+    <label for="stock-quantity">Jumlah Stok:</label>
+    <input type="number" id="stock-quantity" name="stock-quantity" required>
+   </div>
+
+   <div class="form-group">
+    <label for="purchase-price">Harga Beli:</label>
+    <input type="number" id="purchase-price" name="purchase-price" step="0.01" required>
+   </div>
+
+   <div class="form-group">
+    <label for="selling-price">Harga Jual:</label>
+    <input type="number" id="selling-price" name="selling-price" step="0.01" required>
+   </div>
+
+   <div class="form-actions">
+    <button type="submit">Kirim</button>
+   </div>
+   </form>
+</div>
+</body>
+</html>
